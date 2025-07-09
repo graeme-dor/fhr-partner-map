@@ -1,0 +1,191 @@
+[
+  {
+    "No":"1",
+    "CBOs":"Abalimi Bezekhaya",
+    "Province":"Western Cape",
+    "Town":"Cape Town",
+    "Latitude":"-33.922087",
+    "Longitude":"18.4231418",
+    "Address":"20 Boston Circle, Airport Indistria North, Cape Town "
+  },
+  {
+    "No":"2",
+    "CBOs":"Association for Rural Advancement (AFRA)",
+    "Province":"Kwazulu Natal",
+    "Town":"Pietermarizburg",
+    "Latitude":"-29.6015249",
+    "Longitude":"30.3790245",
+    "Address":"123 Jabu Ndlovu Street, PMB"
+  },
+  {
+    "No":"3",
+    "CBOs":"Batho Golang supported by Nkuzi Development Association",
+    "Province":"Limpopo",
+    "Town":"Polokwane",
+    "Latitude":"-23.8980905",
+    "Longitude":"29.4499945",
+    "Address":"No.3, 106 Schoeman Street, Polokwane North, 0750"
+  },
+  {
+    "No":"4",
+    "CBOs":"Bloodriver Advice Office ",
+    "Province":"Limpopo",
+    "Town":"Seshego",
+    "Latitude":"-23.8476768",
+    "Longitude":"29.3932622",
+    "Address":"Blood River Village Lutheran Church Centre 0751"
+  },
+  {
+    "No":"5",
+    "CBOs":"Walkerville Garden supported by Food and Trees Africa",
+    "Province":"Gauteng",
+    "Town":"Sandton",
+    "Latitude":"-26.0910296",
+    "Longitude":"28.0855317",
+    "Address":"94 Bessemer St, Wendywood, Sandton, 2144"
+  },
+  {
+    "No":"6",
+    "CBOs":"Mopani Farmers Association (MFA) ",
+    "Province":"Limpopo",
+    "Town":"Giyani",
+    "Latitude":"-23.3127019",
+    "Longitude":"30.703424",
+    "Address":"Stand no 39, Dhambi Village, FouwayStop, Giyani"
+  },
+  {
+    "No":"7",
+    "CBOs":"Mpophomeni Gender and Paralegal Centre",
+    "Province":"Kwazulu Natal",
+    "Town":"Mpophomeni",
+    "Latitude":"-29.56740749999999",
+    "Longitude":"30.1862204",
+    "Address":"2691 Nelson Mandela Drive, Mpophomeni Township"
+  },
+  {
+    "No":"8",
+    "CBOs":"My Dignity Restored Shelter for the Abused Women and Children NPC ",
+    "Province":"Free State",
+    "Town":"Botshabelo",
+    "Latitude":"-29.2279544",
+    "Longitude":"26.7059928",
+    "Address":"1191\/2 Section W, Botshabelo, 9781"
+  },
+  {
+    "No":"9",
+    "CBOs":"NOAH",
+    "Province":"Western Cape",
+    "Town":"Woodstock",
+    "Latitude":"-33.929413",
+    "Longitude":"18.4497262",
+    "Address":"19 Regent Street, Woodstock 7925"
+  },
+  {
+    "No":"10",
+    "CBOs":"Oliver's House Education Centre",
+    "Province":"Gauteng",
+    "Town":"Benoni",
+    "Latitude":"-26.1507068",
+    "Longitude":"28.367639",
+    "Address":"145 Malherbe Rd, Putfontein AH, Benoni, 1513"
+  },
+  {
+    "No":"11",
+    "CBOs":"Railton Foundation Swellendam ",
+    "Province":"Western Cape",
+    "Town":"Swellendam",
+    "Latitude":"-34.0275079",
+    "Longitude":"20.4436269",
+    "Address":"St. Patrick\u2019s Catholic Church, 31 Veldkornet Street, Swellendam, 6740"
+  },
+  {
+    "No":"12",
+    "CBOs":"Seriti Institute",
+    "Province":"Western Cape",
+    "Town":"Woodmead",
+    "Latitude":"-33.2277918",
+    "Longitude":"21.8568586",
+    "Address":"Building 2 Jacaranda Place, Western Woods Office Park, Woodmead, 2191"
+  },
+  {
+    "No":"13",
+    "CBOs":"Siyanakekela Community Development",
+    "Province":"Eastern Cape",
+    "Town":"Matatiele",
+    "Latitude":"-30.3425851",
+    "Longitude":"28.8051195",
+    "Address":"Kotsoana Village George Moshesh A\/A Matatiele\u00a0 4730"
+  },
+  {
+    "No":"14",
+    "CBOs":"Sustainable Community Development NPO",
+    "Province":"Free State",
+    "Town":"Rosendal",
+    "Latitude":"-28.5075715",
+    "Longitude":"27.9253608",
+    "Address":"Waaipoort Farm, Rosendal, 9720"
+  },
+  {
+    "No":"15",
+    "CBOs":"Terrestrial Kulture",
+    "Province":"Eastern Cape",
+    "Town":"Misty Mount",
+    "Latitude":"-31.5363215",
+    "Longitude":"28.9481109",
+    "Address":"Misty Mount Loc Corana AA Libode Eastern Cape 5160"
+  },
+  {
+    "No":"16",
+    "CBOs":"THANDA",
+    "Province":"Kwazulu Natal",
+    "Town":"Nyangwini",
+    "Latitude":"-30.4977225",
+    "Longitude":"30.57989389999999",
+    "Address":"Sipofu Rd, Qwabe, Nyangwini, 4220"
+  },
+  {
+    "No":"17",
+    "CBOs":"The Movement in Africa",
+    "Province":"Eastern Cape",
+    "Town":"Misty Mount",
+    "Latitude":"-31.5363215",
+    "Longitude":"28.9481109",
+    "Address":"Misty Mount Location Libode 5160"
+  },
+  {
+    "No":"18",
+    "CBOs":"Tlou Tlou Youth Development",
+    "Province":"Limpopo",
+    "Town":"Polokwane",
+    "Latitude":"-23.8980905",
+    "Longitude":"29.4499945",
+    "Address":"Ward 10, Mnotong\/Makgofe Village Caprocon Polokwane "
+  },
+  {
+    "No":"19",
+    "CBOs":"Wana Johnson Learning Centre",
+    "Province":"Eastern Cape",
+    "Town":"Vlei Administration Area",
+    "Latitude":"-31.1746473",
+    "Longitude":"29.6897648",
+    "Address":"Ward 26 Taweni Location\u00a0, Vlei Administration Area, Holy Cross, 4811"
+  },
+  {
+    "No":"20",
+    "CBOs":"Woza Moya Community Development ",
+    "Province":"Kwazulu Natal",
+    "Town":"Ixopo",
+    "Latitude":"-30.157441",
+    "Longitude":"30.0647665",
+    "Address":"Chibini Village, District Road 64, Ufafa, Ixopo, 3276"
+  },
+  {
+    "No":"21",
+    "CBOs":"Zululand Conservation Trust ",
+    "Province":"Kwazulu Natal",
+    "Town":"Mkuze",
+    "Latitude":"-27.6208718",
+    "Longitude":"32.0334793",
+    "Address":"Manyoni Private Game Reserve, North Gate. Poincare Fram, D240 Road, Mkuze, 3965"
+  }
+]

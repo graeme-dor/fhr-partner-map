@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+#map {
+  height: 100vh;
+}
+
+.map-title {
+  position: absolute;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1002;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  max-width: 90%;
+}
+
+.map-title .subtitle {
+  display: block;
+  font-size: 14px;
+  font-weight: normal;
+  margin-top: 2px;
+  color: #666;
+}
+
+.legend {
+  position: absolute;
+  bottom: 20px;
+  left: 10px;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 10px 12px;
+  border-radius: 6px;
+  font-size: 13px;
+  line-height: 1.4em;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.15);
+  z-index: 1001 !important;         /* Force it to sit above map layers */
+  pointer-events: auto !important;  /* Ensure it can be interacted with if needed */
+}
+
+.legend div {
+  margin-bottom: 6px;
+}
+
+.legend i {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  margin-right: 8px;
+  border-radius: 50%;
+  border: 1px solid #333;
+  vertical-align: middle;
+}
