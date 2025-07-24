@@ -1,9 +1,8 @@
-
 import pandas as pd
 from pathlib import Path
 
 # Path to updated Excel file
-excel_path = Path("data/FHR_Partners_Geocoded_Google.xlsx")
+excel_path = Path("data/FHR_Partners_Geocoded.xlsx")
 output_dir = Path("data")
 
 # Read Excel file

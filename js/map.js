@@ -1,23 +1,51 @@
-const layers = {
-  "GBV Masibambisane Orgns": L.layerGroup(),
-  "Growing Food Orgns": L.layerGroup(),
+window.layers = {
+  "GBV Masibambisane Partners": L.layerGroup(),
+  "Growing Food Partners": L.layerGroup(),
   "Human Rights Clubs": L.layerGroup(),
   "TRC Cases Supported": L.layerGroup()
 };
 
 const colors = {
-  "GBV Masibambisane Orgns": "purple",
-  "Growing Food Orgns": "green",
+  "GBV Masibambisane Partners": "purple",
+  "Growing Food Partners": "green",
   "Human Rights Clubs": "blue",
   "TRC Cases Supported": "orange"
 };
 
-// Set initial center and zoom (zoom changed from 5 to 6)
-const map = L.map('map').setView([-28.5, 24.5], 6);
+// Initialize map without setting view yet
+const map = L.map('map');
+
+// Set bounds to cover all of South Africa
+const southAfricaBounds = L.latLngBounds(
+  [-35.0, 16.0],  // Southwest corner
+  [-22.0, 33.0]   // Northeast corner
+);
+
+map.fitBounds(southAfricaBounds);       // Fit to SA on load
+
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-  maxZoom: 18,
+  maxZoom: 12,
   attribution: '© OpenStreetMap contributors'
 }).addTo(map);
+
+window.allMarkers = [];
+
+const jsonFiles = {
+  "GBV Masibambisane Partners": "GBV_Masibambisane_Partners.json",
+  "Growing Food Partners": "Growing_Food_Partners.json",
+  "Human Rights Clubs": "Human_Rights_Clubs.json",
+  "TRC Cases Supported": "TRC_Cases_Supported.json"
+};
+
+let completedLoads = 0;
+const totalLoads = Object.keys(jsonFiles).length;
+
+function checkIfReady() {
+  completedLoads++;
+  if (completedLoads === totalLoads) {
+    window.dispatchEvent(new Event("dataLoaded"));
+  }
+}
 
 function loadData(sheetName, jsonFile) {
   fetch('data/' + jsonFile)
@@ -28,30 +56,22 @@ function loadData(sheetName, jsonFile) {
         const lon = parseFloat(entry["Longitude"]);
 
         if (!isNaN(lat) && !isNaN(lon)) {
-          // Fields to exclude from the popup
-          const excludeFields = [
-          	"No.",
-            "Latitude",
-            "Longitude",
-            "X",
-            "Y",
-            "",
-            "Unnamed: 0"
-          ];
-
-          // Filter entry to exclude unwanted fields
+          const excludeFields = ["No", "Latitude", "Longitude", "Physical Address", "Address", "Physical Address (Google Map)", "Stage of the proceedings", "TRC"];
           const filteredEntries = Object.entries(entry).filter(
             ([key, _]) => !excludeFields.includes(key)
           );
 
-          // Build popup content from filtered fields
           const popupContent = `
             <b>${sheetName}</b><br>` +
-            filteredEntries.map(([k, v]) => `<b>${k}:</b> ${v}`).join("<br>");
+            filteredEntries.map(([k, v]) => {
+              const value = (typeof v === 'string' && v.startsWith('http'))
+               ? `<a href="${v}" target="_blank" rel="noopener noreferrer">${v}</a>`
+               : v;
+              return `<b>${k}:</b> ${value}`;
+            }).join("<br>");
 
-          // Create the marker and bind popup
           const marker = L.circleMarker([lat, lon], {
-            radius: 6,
+            radius: 6,  // Slightly larger for visibility
             fillColor: colors[sheetName],
             color: "#000",
             weight: 1,
@@ -59,26 +79,48 @@ function loadData(sheetName, jsonFile) {
             fillOpacity: 0.8
           }).bindPopup(popupContent);
 
-          layers[sheetName].addLayer(marker);
+          window.layers[sheetName].addLayer(marker);
+
+          window.allMarkers.push({
+            marker,
+            province: entry["Province"],
+            layerName: sheetName
+          });
         }
       });
 
-      layers[sheetName].addTo(map);
+      window.layers[sheetName].addTo(map);
+      checkIfReady();
     });
 }
 
-// JSON files to load for each sheet
-const jsonFiles = {
-  "GBV Masibambisane Orgns": "GBV_Masibambisane_Orgns.json",
-  "Growing Food Orgns": "Growing_Food_Orgns.json",
-  "Human Rights Clubs": "Human_Rights_Clubs.json",
-  "TRC Cases Supported": "TRC_Cases_Supported.json"
-};
-
-// Load data for each theme
 for (const [sheetName, jsonFile] of Object.entries(jsonFiles)) {
   loadData(sheetName, jsonFile);
 }
 
-// Add layer control to top right
-L.control.layers(null, layers, { position: 'topright', collapsed: false }).addTo(map);
+L.control.layers(null, window.layers, { position: 'topright', collapsed: false }).addTo(map);
+
+// Legend click-to-filter
+document.querySelectorAll('.legend div').forEach(div => {
+  div.addEventListener('click', () => {
+    const label = div.textContent.trim();
+    const mapping = {
+      'GBV Masibambisane Partners': 'GBV Masibambisane Partners',
+      'Growing Food Partners': 'Growing Food Partners',
+      'Human Rights Clubs': 'Human Rights Clubs',
+      'TRC Cases Supported': 'TRC Cases Supported'
+    };
+    const selected = mapping[label];
+
+    Object.values(window.layers).forEach(layer => map.removeLayer(layer));
+    if (selected in window.layers) {
+      map.addLayer(window.layers[selected]);
+    }
+
+    document.querySelectorAll('.legend div').forEach(d => d.classList.remove('active'));
+    div.classList.add('active');
+
+    const select = document.getElementById('provinceSelect');
+    if (select) select.value = "All";
+  });
+});
