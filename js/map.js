@@ -20,7 +20,7 @@ const southAfricaBounds = L.latLngBounds(
 
 // Initialize the map with zoom limits and bounds
 const map = L.map('map', {
-  minZoom: 4,
+  minZoom: 5,
   maxZoom: 12
 }).fitBounds(southAfricaBounds);
 
