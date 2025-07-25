@@ -13,7 +13,10 @@ const colors = {
 };
 
 // Initialize map without setting view yet
-const map = L.map('map');
+const map = L.map('map', {
+  minZoom: 3,  // Prevent zooming too far out
+  maxZoom: 12  // Keep your current max
+});
 
 // Set bounds to cover all of South Africa
 const southAfricaBounds = L.latLngBounds(
@@ -21,12 +24,23 @@ const southAfricaBounds = L.latLngBounds(
   [-22.0, 33.0]   // Northeast corner
 );
 
-map.fitBounds(southAfricaBounds);       // Fit to SA on load
+window.addEventListener("load", () => {
+  setTimeout(() => {
+    map.invalidateSize(); // Recalculate container dimensions
+    map.fitBounds(southAfricaBounds); // Then fit to bounds
+  }, 100); // Delay to ensure layout is complete
+});
 
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  minZoom: 3,
   maxZoom: 12,
   attribution: '© OpenStreetMap contributors'
 }).addTo(map);
+
+// Credit attribution
+map.attributionControl.addAttribution(
+  'Web Map by Graeme Dor | <a href="https://datavisionanalytics.com" target="_blank">DataVision Analytics</a>'
+);
 
 window.allMarkers = [];
 
