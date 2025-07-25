@@ -32,14 +32,12 @@ window.addEventListener("load", () => {
 });
 
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-  minZoom: 3,
-  maxZoom: 12,
   attribution: '© OpenStreetMap contributors'
 }).addTo(map);
 
 // Credit attribution
 map.attributionControl.addAttribution(
-  'Web Map by Graeme Dor | <a href="https://datavisionanalytics.com" target="_blank">DataVision Analytics</a>'
+  'Web Map by <strong>Graeme Dor</strong> & <a href="https://datavisionanalytics.com" target="_blank" rel="noopener noreferrer">DataVision Analytics</a>'
 );
 
 window.allMarkers = [];
