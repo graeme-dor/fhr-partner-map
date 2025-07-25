@@ -12,27 +12,22 @@ const colors = {
   "TRC Cases Supported": "orange"
 };
 
-// Initialize map without setting view yet
-const map = L.map('map');
-
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-  minZoom: 4,
-  maxZoom: 12,
-  attribution: '© OpenStreetMap contributors'
-}).addTo(map);
-
+// Set bounds for South Africa
 const southAfricaBounds = L.latLngBounds(
-  [-35.0, 16.0],
-  [-22.0, 33.0]
+  [-35.0, 16.0],  // Southwest corner
+  [-22.0, 33.0]   // Northeast corner
 );
 
-// On load, gently fit to bounds with maxZoom limit
-//window.addEventListener("load", () => {
-//  setTimeout(() => {
-//    map.invalidateSize();
-//    map.fitBounds(southAfricaBounds, { maxZoom: 7 });
-//  }, 100);
-//});
+// Initialize the map with zoom limits and bounds
+const map = L.map('map', {
+  minZoom: 4,
+  maxZoom: 12
+}).fitBounds(southAfricaBounds);
+
+// Add the tile layer
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '© OpenStreetMap contributors'
+}).addTo(map);
 
 // Credit attribution
 map.attributionControl.addAttribution(
