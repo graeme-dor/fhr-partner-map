@@ -28,10 +28,10 @@ const southAfricaBounds = L.latLngBounds(
 
 // On load, gently fit to bounds with maxZoom limit
 window.addEventListener("load", () => {
-  setTimeout(() => {
+  requestAnimationFrame(() => {
     map.invalidateSize();
     map.fitBounds(southAfricaBounds, { maxZoom: 7 });
-  }, 100);
+  });
 });
 
 // Credit attribution
