@@ -13,27 +13,26 @@ const colors = {
 };
 
 // Initialize map without setting view yet
-const map = L.map('map', {
-  minZoom: 3,  // Prevent zooming too far out
-  maxZoom: 12  // Keep your current max
-});
-
-// Set bounds to cover all of South Africa
-const southAfricaBounds = L.latLngBounds(
-  [-35.0, 16.0],  // Southwest corner
-  [-22.0, 33.0]   // Northeast corner
-);
-
-window.addEventListener("load", () => {
-  setTimeout(() => {
-    map.invalidateSize(); // Recalculate container dimensions
-    map.fitBounds(southAfricaBounds); // Then fit to bounds
-  }, 100); // Delay to ensure layout is complete
-});
+const map = L.map('map');
 
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  minZoom: 4,
+  maxZoom: 12,
   attribution: '© OpenStreetMap contributors'
 }).addTo(map);
+
+const southAfricaBounds = L.latLngBounds(
+  [-35.0, 16.0],
+  [-22.0, 33.0]
+);
+
+// On load, gently fit to bounds with maxZoom limit
+window.addEventListener("load", () => {
+  setTimeout(() => {
+    map.invalidateSize();
+    map.fitBounds(southAfricaBounds, { maxZoom: 7 });
+  }, 100);
+});
 
 // Credit attribution
 map.attributionControl.addAttribution(
