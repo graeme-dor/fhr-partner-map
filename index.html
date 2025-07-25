@@ -8,29 +8,30 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
-<div class="map-title">
-  FHR Grantee Partner Organisations 2022–2025 <span class="subtitle">(2–3 year partnership)</span>
-</div>
+  <div class="map-title">
+    FHR Grantee Partner Organisations 2022–2025 <span class="subtitle">(2–3 year partnership)</span>
+  </div>
 
-<div id="map"></div>
+  <div id="map"></div>
 
-<div class="legend" id="map-legend">
-  <div><i style="background: purple;"></i> GBV Masibambisane Partners</div>
-  <div><i style="background: green;"></i> Growing Food Partners</div>
-  <div><i style="background: blue;"></i> Human Rights Clubs</div>
-  <div><i style="background: orange;"></i> TRC Cases Supported</div>
-</div>
+  <div class="legend" id="map-legend">
+    <div><i style="background: purple;"></i> GBV Masibambisane Partners</div>
+    <div><i style="background: green;"></i> Growing Food Partners</div>
+    <div><i style="background: blue;"></i> Human Rights Clubs</div>
+    <div><i style="background: orange;"></i> TRC Cases Supported</div>
+  </div>
 
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-<script src="js/map.js"></script>
-<script src="js/province-filter.js"></script>
+  <!-- Province filter -->
+  <div id="province-filter">
+    <label for="provinceSelect">Filter by Province:</label>
+    <select id="provinceSelect">
+      <option value="All">All Provinces</option>
+    </select>
+  </div>
 
-<div id="province-filter">
-  <label for="provinceSelect">Filter by Province:</label>
-  <select id="provinceSelect">
-    <option value="All">All Provinces</option>
-  </select>
-</div>
-
+  <!-- Scripts -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="js/map.js"></script>
+  <script src="js/province-filter.js"></script>
 </body>
 </html>
