@@ -42,6 +42,8 @@ window.addEventListener("dataLoaded", () => {
   const select = document.getElementById("provinceSelect");
   if (!select) return;
 
+  // Clear and rebuild dropdown
+  select.innerHTML = '<option value="All">All Provinces</option>';
   [...provinceSet].sort().forEach(prov => {
     const option = document.createElement("option");
     option.value = prov;
