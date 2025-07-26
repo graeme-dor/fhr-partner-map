@@ -1,47 +1,47 @@
-// --- Province filter setup ---
-const markers = window.allMarkers || [];
-const layers = window.layers || {};
+window.addEventListener("dataLoaded", () => {
+  const markers = window.allMarkers || [];
+  const layers = window.layers || {};
 
-const normalize = (p) => {
-  if (!p) return "";
-  const cleaned = p.trim().toLowerCase().replace(/-/g, ' ').replace(/\s+/g, ' ');
-  const map = {
-    "kwazulu natal": "KwaZulu-Natal",
-    "eastern cape": "Eastern Cape",
-    "western cape": "Western Cape",
-    "northern cape": "Northern Cape",
-    "north west": "North West",
-    "free state": "Free State",
-    "gauteng": "Gauteng",
-    "limpopo": "Limpopo",
-    "mpumalanga": "Mpumalanga"
+  const normalize = (p) => {
+    if (!p) return "";
+    const cleaned = p.trim().toLowerCase().replace(/-/g, ' ').replace(/\s+/g, ' ');
+    const map = {
+      "kwazulu natal": "KwaZulu-Natal",
+      "eastern cape": "Eastern Cape",
+      "western cape": "Western Cape",
+      "northern cape": "Northern Cape",
+      "north west": "North West",
+      "free state": "Free State",
+      "gauteng": "Gauteng",
+      "limpopo": "Limpopo",
+      "mpumalanga": "Mpumalanga"
+    };
+    return map[cleaned] || p.trim();
   };
-  return map[cleaned] || p.trim();
-};
 
-const provinceBounds = {
-  "Eastern Cape": [[-34.2, 22.3], [-30.5, 30.1]],
-  "Free State": [[-30.7, 24.3], [-26.3, 29.5]],
-  "Gauteng": [[-26.7, 27.4], [-25.6, 28.7]],
-  "KwaZulu-Natal": [[-30.9, 28.5], [-26.8, 32.0]],
-  "Limpopo": [[-25.7, 26.3], [-22.1, 31.5]],
-  "Mpumalanga": [[-26.9, 28.5], [-24.6, 32.0]],
-  "North West": [[-27.6, 22.9], [-24.7, 28.3]],
-  "Northern Cape": [[-32.0, 16.4], [-27.0, 24.0]],
-  "Western Cape": [[-34.8, 18.2], [-31.6, 22.9]]
-};
+  const provinceBounds = {
+    "Eastern Cape": [[-34.2, 22.3], [-30.5, 30.1]],
+    "Free State": [[-30.7, 24.3], [-26.3, 29.5]],
+    "Gauteng": [[-26.7, 27.4], [-25.6, 28.7]],
+    "KwaZulu-Natal": [[-30.9, 28.5], [-26.8, 32.0]],
+    "Limpopo": [[-25.7, 26.3], [-22.1, 31.5]],
+    "Mpumalanga": [[-26.9, 28.5], [-24.6, 32.0]],
+    "North West": [[-27.6, 22.9], [-24.7, 28.3]],
+    "Northern Cape": [[-32.0, 16.4], [-27.0, 24.0]],
+    "Western Cape": [[-34.8, 18.2], [-31.6, 22.9]]
+  };
 
-// Normalize provinces and build unique list
-const provinceSet = new Set();
-markers.forEach(m => {
-  m.normalizedProvince = normalize(m.province);
-  if (m.normalizedProvince) {
-    provinceSet.add(m.normalizedProvince);
-  }
-});
+  const provinceSet = new Set();
+  markers.forEach(m => {
+    m.normalizedProvince = normalize(m.province);
+    if (m.normalizedProvince) {
+      provinceSet.add(m.normalizedProvince);
+    }
+  });
 
-const select = document.getElementById("provinceSelect");
-if (select) {
+  const select = document.getElementById("provinceSelect");
+  if (!select) return;
+
   [...provinceSet].sort().forEach(prov => {
     const option = document.createElement("option");
     option.value = prov;
@@ -67,4 +67,4 @@ if (select) {
       map.setView([-28.5, 24.5], 6);
     }
   });
-}
+});
