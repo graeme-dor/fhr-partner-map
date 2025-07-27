@@ -18,15 +18,20 @@ const southAfricaBounds = L.latLngBounds(
   [-22.0, 33.0]
 );
 
-// Initialize the map
+// Initialize map and fit bounds
 const map = L.map('map', {
   minZoom: 4,
   maxZoom: 12
 }).fitBounds(southAfricaBounds);
 
-// Optional: Override zoom on mobile devices if too zoomed in
-if (window.innerWidth < 768) {
-  map.setZoom(4);  // Mobile-specific zoom level
+// Override zoom level for larger screens
+if (window.innerWidth >= 768) {
+  map.once('zoomend', () => {
+    // Only override if fitBounds resulted in zoom < 5
+    if (map.getZoom() < 5) {
+      map.setZoom(5);
+    }
+  });
 }
 
 // Add OpenStreetMap tiles
@@ -184,7 +189,7 @@ window.addEventListener("dataLoaded", () => {
     } else {
       // All Provinces selected: adjust zoom by device
       const isMobile = window.innerWidth < 768;
-      map.setView([-28.5, 24.5], isMobile ? 4 : 5);
+      map.setView([-28.5, 24.5], isMobile ? 4 : 6);
     }
   });
 });
