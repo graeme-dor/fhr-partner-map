@@ -34,7 +34,7 @@ def normalize_province(province):
 ## 2. Geocoding at the town level:
 
 # Initialize Google Maps client
-gmaps = googlemaps.Client(key='AIzaSyBqqc8p-2Xhcqa3744XX_iS5d5JywQvFGI')
+gmaps = googlemaps.Client(key='')
 
 # Define geocoding function
 def geocode_address(address):
