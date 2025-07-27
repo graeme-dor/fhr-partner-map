@@ -13,22 +13,21 @@ const colors = {
 };
 
 // Set bounds for South Africa
-//const southAfricaBounds = L.latLngBounds(
-//  [-35.0, 16.0],
-//  [-22.0, 33.0]
-//);
+const southAfricaBounds = L.latLngBounds(
+  [-35.0, 16.0],
+  [-22.0, 33.0]
+);
 
-// Determine device width and set zoom
-const isMobile = window.innerWidth < 768;
-const initialZoom = isMobile ? 4 : 5;
-
-// Initialize the map centered on South Africa
+// Initialize the map
 const map = L.map('map', {
-  center: [-28.5, 24.5], // Rough center of SA
-  zoom: initialZoom,
-  minZoom: 4,
+  minZoom: 5,
   maxZoom: 12
-});
+}).fitBounds(southAfricaBounds);
+
+// Optional: Override zoom on mobile devices if too zoomed in
+if (window.innerWidth < 768) {
+  map.setZoom(4);  // Mobile-specific zoom level
+}
 
 // Add OpenStreetMap tiles
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -183,9 +182,7 @@ window.addEventListener("dataLoaded", () => {
     if (selected in provinceBounds) {
       map.fitBounds(provinceBounds[selected]);
     } else {
-      // All Provinces selected: adjust zoom by device
-      const isMobile = window.innerWidth < 768;
-      map.setView([-28.5, 24.5], isMobile ? 4 : 5);
+      map.fitBounds([[-35.0, 16.0], [-22.0, 33.0]]);
     }
   });
 });
