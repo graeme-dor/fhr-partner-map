@@ -1,24 +1,6 @@
 window.addEventListener("dataLoaded", () => {
   const markers = window.allMarkers || [];
   const layers = window.layers || {};
-
-  const normalize = (p) => {
-    if (!p) return "";
-    const cleaned = p.trim().toLowerCase().replace(/-/g, ' ').replace(/\s+/g, ' ');
-    const map = {
-      "kwazulu natal": "KwaZulu-Natal",
-      "eastern cape": "Eastern Cape",
-      "western cape": "Western Cape",
-      "northern cape": "Northern Cape",
-      "north west": "North West",
-      "free state": "Free State",
-      "gauteng": "Gauteng",
-      "limpopo": "Limpopo",
-      "mpumalanga": "Mpumalanga"
-    };
-    return map[cleaned] || p.trim();
-  };
-
   const provinceBounds = {
     "Eastern Cape": [[-34.2, 22.3], [-30.5, 30.1]],
     "Free State": [[-30.7, 24.3], [-26.3, 29.5]],
@@ -33,17 +15,14 @@ window.addEventListener("dataLoaded", () => {
 
   const provinceSet = new Set();
   markers.forEach(m => {
-    m.normalizedProvince = normalize(m.province);
-    if (m.normalizedProvince) {
-      provinceSet.add(m.normalizedProvince);
+    if (m.province) {
+      provinceSet.add(m.province);
     }
   });
 
   const select = document.getElementById("provinceSelect");
   if (!select) return;
 
-  // Clear and rebuild dropdown
-  select.innerHTML = '<option value="All">All Provinces</option>';
   [...provinceSet].sort().forEach(prov => {
     const option = document.createElement("option");
     option.value = prov;
@@ -54,9 +33,9 @@ window.addEventListener("dataLoaded", () => {
   select.addEventListener("change", (e) => {
     const selected = e.target.value;
 
-    markers.forEach(({ marker, normalizedProvince, layerName }) => {
+    markers.forEach(({ marker, province, layerName }) => {
       const layer = layers[layerName];
-      if (selected === "All" || normalizedProvince === selected) {
+      if (selected === "All" || province === selected) {
         layer.addLayer(marker);
       } else {
         layer.removeLayer(marker);

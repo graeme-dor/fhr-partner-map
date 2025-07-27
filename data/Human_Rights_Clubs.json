@@ -7,8 +7,8 @@
     "Province":"North West",
     "Town":"Rustenburg",
     "Physical Address (Google Map)":"https:\/\/maps.app.goo.gl\/irbpCeALbUzHeHXz5",
-    "Latitude":"-25.67220409677826",
-    "Longitude":"27.235762610813"
+    "Latitude":"-25.67561525692701",
+    "Longitude":"27.23584568333255"
   },
   {
     "No":"2",
@@ -18,8 +18,8 @@
     "Province":"North West",
     "Town":"Rustenburg",
     "Physical Address (Google Map)":"1109 Nelson Mandela St, Phatsima, Rustenburg, 0351",
-    "Latitude":"-25.66436619430646",
-    "Longitude":"27.24362815339374"
+    "Latitude":"-25.67639563630532",
+    "Longitude":"27.24686548918428"
   },
   {
     "No":"3",
@@ -29,8 +29,8 @@
     "Province":"Western Cape",
     "Town":"Cape Town",
     "Physical Address (Google Map)":"58 Kiewiet Rd, Bridgetown, Cape Town, 7769",
-    "Latitude":"-33.91299762285691",
-    "Longitude":"18.42421966743632"
+    "Latitude":"-33.91486044871371",
+    "Longitude":"18.4303868407082"
   },
   {
     "No":"4",
@@ -40,8 +40,8 @@
     "Province":"Western Cape",
     "Town":"Cape Town",
     "Physical Address (Google Map)":"Sipres Ave, Bridgetown, Cape Town, 7764",
-    "Latitude":"-33.91528040018368",
-    "Longitude":"18.41602659327719"
+    "Latitude":"-33.91843687622078",
+    "Longitude":"18.42483316221153"
   },
   {
     "No":"5",
@@ -51,8 +51,8 @@
     "Province":"Limpopo",
     "Town":"Seshego Zone 3",
     "Physical Address (Google Map)":"Commodore Ave, 1827 Zone 3, Seshego-C, Polokwane, 0742",
-    "Latitude":"-23.84967348799373",
-    "Longitude":"29.37969236241326"
+    "Latitude":"-23.84121903436854",
+    "Longitude":"29.37694249305345"
   },
   {
     "No":"6",
@@ -62,30 +62,30 @@
     "Province":"Limpopo",
     "Town":"Seshego Zone 3",
     "Physical Address (Google Map)":"1564 66th Ave, Seshego-C, Polokwane, 0742",
-    "Latitude":"-23.84468594628398",
-    "Longitude":"29.37696299168308"
+    "Latitude":"-23.84114844892832",
+    "Longitude":"29.37960026836785"
   },
   {
     "No":"7",
     "School Name":"Khwezi-Lomso Comprehensive School",
     "School Area":"Zwide 4",
     "CBO Partner - GBV Masibambisane":"Doxa Youth Programs",
-    "Province":"Eastern Cape ",
+    "Province":"Eastern Cape",
     "Town":"Gqeberha",
     "Physical Address (Google Map)":"Zwide 2, Ibhayi, 6205",
-    "Latitude":"-33.91678707369896",
-    "Longitude":"25.58946287834251"
+    "Latitude":"-33.90650348116984",
+    "Longitude":"25.58779022272385"
   },
   {
     "No":"8",
     "School Name":"Garrett Public Primary School ",
     "School Area":"Zwide 4",
     "CBO Partner - GBV Masibambisane":"Doxa Youth Programs ",
-    "Province":"Eastern Cape ",
+    "Province":"Eastern Cape",
     "Town":"Gqeberha",
     "Physical Address (Google Map)":"Zwide 3, Ibhayi, 6205",
-    "Latitude":"-33.905670742895",
-    "Longitude":"25.5852651635365"
+    "Latitude":"-33.90675649172453",
+    "Longitude":"25.58837571349237"
   },
   {
     "No":"9",
@@ -95,8 +95,8 @@
     "Province":"Northern Cape",
     "Town":"De Aar",
     "Physical Address (Google Map)":"2 Angeline St, De Aar, 7000",
-    "Latitude":"-30.64115552188461",
-    "Longitude":"24.01793505109065"
+    "Latitude":"-30.65129098950961",
+    "Longitude":"24.01401732006992"
   },
   {
     "No":"10",
@@ -106,30 +106,30 @@
     "Province":"Northern Cape",
     "Town":"De Aar",
     "Physical Address (Google Map)":"1 Bloekom St, De Aar, 7000",
-    "Latitude":"-30.64959625640029",
-    "Longitude":"24.01196773405263"
+    "Latitude":"-30.63777962344104",
+    "Longitude":"24.00869877999387"
   },
   {
     "No":"11",
     "School Name":"Kuhlekonke High School ",
     "School Area":"Emaswazini",
     "CBO Partner - GBV Masibambisane":"Families South Africa Pietermaritzburg (FAMSA PMB)",
-    "Province":"KwaZulu Natal",
+    "Province":"KwaZulu-Natal",
     "Town":"Pietermaritzburg",
     "Physical Address (Google Map)":"https:\/\/share.google\/xZ2knMIycJRPROlRn   3401 Maswazini Pietermaritzburg  3201",
-    "Latitude":"-29.60127615536759",
-    "Longitude":"30.38249981693924"
+    "Latitude":"-29.59647196517574",
+    "Longitude":"30.37921417005645"
   },
   {
     "No":"12",
     "School Name":"Mbambangalo High school ",
     "School Area":"Maqongqo",
     "CBO Partner - GBV Masibambisane":"Families South Africa Pietermaritzburg (FAMSA PMB)",
-    "Province":"KwaZulu Natal",
+    "Province":"KwaZulu-Natal",
     "Town":"Pietermaritzburg",
     "Physical Address (Google Map)":"Table Mountain Rd, Eastwolds, Pietermaritzburg, 3201",
-    "Latitude":"-29.60215714107128",
-    "Longitude":"30.376223204914"
+    "Latitude":"-29.60054737026591",
+    "Longitude":"30.37802430166695"
   },
   {
     "No":"13",
@@ -139,8 +139,8 @@
     "Province":"Free State",
     "Town":"Bloemspruit",
     "Physical Address (Google Map)":"Meadows St, Rodenbeck, Bloemfontein, 9328 (https:\/\/maps.app.goo.gl\/6DqMNkww72yQcgcC8)",
-    "Latitude":"-29.12792530462544",
-    "Longitude":"26.27676302661703"
+    "Latitude":"-29.12758616489118",
+    "Longitude":"26.28562167835697"
   },
   {
     "No":"14",
@@ -150,8 +150,8 @@
     "Province":"Free State",
     "Town":"Bloemspruit",
     "Physical Address (Google Map)":"https:\/\/maps.app.goo.gl\/aiCsWzeZdxVRrGqR8",
-    "Latitude":"-29.13710299909996",
-    "Longitude":"26.28289264363866"
+    "Latitude":"-29.13081182836828",
+    "Longitude":"26.28471596254374"
   },
   {
     "No":"15",
@@ -161,8 +161,8 @@
     "Province":"Free State",
     "Town":"Bloemspruit",
     "Physical Address (Google Map)":"https:\/\/maps.app.goo.gl\/7MXuCjCUDMFZs3Ge9",
-    "Latitude":"-29.14091263353026",
-    "Longitude":"26.29188397677818"
+    "Latitude":"-29.13979741335006",
+    "Longitude":"26.28036611426643"
   },
   {
     "No":"16",
@@ -172,8 +172,8 @@
     "Province":"Free State",
     "Town":"Bloemspruit",
     "Physical Address (Google Map)":"R79H+QR, Rodenbeck, Bloemfontein, 9328",
-    "Latitude":"-29.13539036112939",
-    "Longitude":"26.27843283021459"
+    "Latitude":"-29.13312496661504",
+    "Longitude":"26.28141291430465"
   },
   {
     "No":"17",
@@ -183,8 +183,8 @@
     "Province":"Gauteng",
     "Town":"Thembisa",
     "Physical Address (Google Map)":"43 Thami Mnyele Cir, Sethebe, Thembisa, 1632",
-    "Latitude":"-26.02111060339211",
-    "Longitude":"28.214922162748"
+    "Latitude":"-26.01617497365869",
+    "Longitude":"28.22529983485829"
   },
   {
     "No":"18",
@@ -194,8 +194,8 @@
     "Province":"Gauteng",
     "Town":"Thembisa",
     "Physical Address (Google Map)":"1 Namibia St, Jiyana, Thembisa, 1632",
-    "Latitude":"-26.01765650020961",
-    "Longitude":"28.23128058562917"
+    "Latitude":"-26.00772897785614",
+    "Longitude":"28.21686510370403"
   },
   {
     "No":"19",
@@ -205,8 +205,8 @@
     "Province":"Gauteng",
     "Town":"Katlehong ",
     "Physical Address (Google Map)":"https:\/\/maps.app.goo.gl\/dML7x5ANRsVXYEyQ8",
-    "Latitude":"-26.36267765869195",
-    "Longitude":"28.14169796289607"
+    "Latitude":"-26.35536144556415",
+    "Longitude":"28.1443528409034"
   },
   {
     "No":"20",
@@ -216,8 +216,8 @@
     "Province":"Gauteng",
     "Town":"Katlehong ",
     "Physical Address (Google Map)":"Sontonga Rd, Katlehong, Johannesburg, 1434",
-    "Latitude":"-26.35669655901962",
-    "Longitude":"28.14242286204568"
+    "Latitude":"-26.36498227083928",
+    "Longitude":"28.14407618099457"
   },
   {
     "No":"21",
@@ -227,8 +227,8 @@
     "Province":"Mpumalanga",
     "Town":"Verena",
     "Physical Address (Google Map)":"40 Verena A, Empumalanga, Verena, 458",
-    "Latitude":"-25.48330638996369",
-    "Longitude":"29.02439490838582"
+    "Latitude":"-25.47635795003008",
+    "Longitude":"29.00746233913173"
   },
   {
     "No":"22",
@@ -238,8 +238,8 @@
     "Province":"Mpumalanga",
     "Town":"Verena",
     "Physical Address (Google Map)":"1284, Verena C, Empumalanga, 458",
-    "Latitude":"-25.47170254098451",
-    "Longitude":"29.01792508894156"
+    "Latitude":"-25.4863984750171",
+    "Longitude":"29.02125058596489"
   },
   {
     "No":"23",
@@ -249,8 +249,8 @@
     "Province":"Eastern Cape",
     "Town":"Mthatha",
     "Physical Address (Google Map)":"Upper Tabase AA , Mthatha, 5099",
-    "Latitude":"-31.58557040327437",
-    "Longitude":"28.75271600109983"
+    "Latitude":"-31.59129237924279",
+    "Longitude":"28.76622748996408"
   },
   {
     "No":"24",
@@ -260,8 +260,8 @@
     "Province":"Eastern Cape",
     "Town":"Mthatha",
     "Physical Address (Google Map)":"Upper Ncise A\/A, Mthatha, 5099 (https:\/\/maps.app.goo.gl\/gL66Fo3NmaGgJQHR7)",
-    "Latitude":"-31.59807337011446",
-    "Longitude":"28.76411475392914"
+    "Latitude":"-31.59383582131341",
+    "Longitude":"28.75713086575806"
   },
   {
     "No":"25",
@@ -271,8 +271,8 @@
     "Province":"Limpopo",
     "Town":"Giyani",
     "Physical Address (Google Map)":"Block 14 A, Main Rd, Homu, 0831",
-    "Latitude":"-23.31432047060651",
-    "Longitude":"30.69580108485691"
+    "Latitude":"-23.30699409606289",
+    "Longitude":"30.69488038472128"
   },
   {
     "No":"26",
@@ -282,8 +282,8 @@
     "Province":"Limpopo",
     "Town":"Giyani",
     "Physical Address (Google Map)":"Block 14 A, Main Rd, Homu, 0831",
-    "Latitude":"-23.30273277899696",
-    "Longitude":"30.69528336182293"
+    "Latitude":"-23.31121455460828",
+    "Longitude":"30.6948092315841"
   },
   {
     "No":"27",
@@ -293,8 +293,8 @@
     "Province":"North West",
     "Town":"Letlhabile",
     "Physical Address (Google Map)":"329 Modisaotsile St, Lethlabile-B, Brits, 0264",
-    "Latitude":"-25.48844732423583",
-    "Longitude":"27.83188206719231"
+    "Latitude":"-25.48663210322576",
+    "Longitude":"27.83662532363554"
   },
   {
     "No":"28",
@@ -304,30 +304,30 @@
     "Province":"North West",
     "Town":"Letlhabile",
     "Physical Address (Google Map)":"Swartdam, Moeka, 0405",
-    "Latitude":"-25.48654253856615",
-    "Longitude":"27.83159275954879"
+    "Latitude":"-25.48886711686297",
+    "Longitude":"27.83626665444433"
   },
   {
     "No":"29",
     "School Name":"Umthombo Secondary School",
     "School Area":"Mpophomeni",
     "CBO Partner - GBV Masibambisane":"Mpophomeni Gender and Paralegal Office (MGPO)",
-    "Province":"KwaZulu Natal",
+    "Province":"KwaZulu-Natal",
     "Town":"Mpophomeni",
     "Physical Address (Google Map)":"70 Mkize Rd, Mpophomeni B, Mpophomeni, 3290",
-    "Latitude":"-29.57035230888783",
-    "Longitude":"30.19257725127261"
+    "Latitude":"-29.55937289129131",
+    "Longitude":"30.19448471978172"
   },
   {
     "No":"30",
     "School Name":"Nhlanhleni Senior Primary School",
     "School Area":"Mpophomeni",
     "CBO Partner - GBV Masibambisane":"Mpophomeni Gender and Paralegal Office (MGPO)",
-    "Province":"KwaZulu Natal",
+    "Province":"KwaZulu-Natal",
     "Town":"Mpophomeni",
     "Physical Address (Google Map)":"Mpophomeni Township, Mpophomeni Township Township, Mpophomeniarea, Howick, 3291",
-    "Latitude":"-29.57281395092231",
-    "Longitude":"30.17723667931871"
+    "Latitude":"-29.57737026179612",
+    "Longitude":"30.1887879545572"
   },
   {
     "No":"31",
@@ -337,8 +337,8 @@
     "Province":"Mpumalanga",
     "Town":"Elukwatini",
     "Physical Address (Google Map)":"https:\/\/share.google\/sPtb7am9XTsBv1r6w",
-    "Latitude":"-26.03703321996902",
-    "Longitude":"30.7885465997434"
+    "Latitude":"-26.03136101452483",
+    "Longitude":"30.785120257149"
   },
   {
     "No":"32",
@@ -348,8 +348,8 @@
     "Province":"Mpumalanga",
     "Town":"Elukwatini",
     "Physical Address (Google Map)":"https:\/\/share.google\/zkYTQL7EOEZhgdhup",
-    "Latitude":"-26.04360638081151",
-    "Longitude":"30.79967601669371"
+    "Latitude":"-26.04971293877983",
+    "Longitude":"30.79186298832423"
   },
   {
     "No":"33",
@@ -359,8 +359,8 @@
     "Province":"Mpumalanga",
     "Town":"Bushbuckridge",
     "Physical Address (Google Map)":"657, Violet Bank A, Shatale, 1282",
-    "Latitude":"-24.84367503597136",
-    "Longitude":"31.08150591901412"
+    "Latitude":"-24.8343291472963",
+    "Longitude":"31.07503226936309"
   },
   {
     "No":"34",
@@ -370,19 +370,19 @@
     "Province":"Mpumalanga",
     "Town":"Bushbuckridge",
     "Physical Address (Google Map)":"Violet Bank G, Shatale",
-    "Latitude":"-24.85087322378515",
-    "Longitude":"31.0718297900195"
+    "Latitude":"-24.83413127169455",
+    "Longitude":"31.07595594527941"
   },
   {
     "No":"35",
     "School Name":"Ida High",
     "School Area":"Deochandorris",
     "CBO Partner - GBV Masibambisane":"Sakhingomso Indwe Community Group",
-    "Province":"Eastern Cape ",
+    "Province":"Eastern Cape",
     "Town":"Indwe -Queenstown",
     "Physical Address (Google Map)":"HHX4+RP Deochandorris",
-    "Latitude":"-31.9124476043067",
-    "Longitude":"26.96407104107173"
+    "Latitude":"-31.91989986631074",
+    "Longitude":"26.96835760417916"
   },
   {
     "No":"36",
@@ -392,19 +392,19 @@
     "Province":"Eastern Cape",
     "Town":"Indwe -Queenstown",
     "Physical Address (Google Map)":"29 Voortrekker St, Indwe, 5445",
-    "Latitude":"-31.92194825294755",
-    "Longitude":"26.95158125969244"
+    "Latitude":"-31.92440641570071",
+    "Longitude":"26.96170478174716"
   },
   {
     "No":"37",
     "School Name":"Lukhanyo Js School",
     "School Area":"Mnquma",
     "CBO Partner - GBV Masibambisane":"Sakhingomso Indwe Community Group",
-    "Province":"Eastern Cape ",
+    "Province":"Eastern Cape",
     "Town":"Indwe -Queenstown",
     "Physical Address (Google Map)":"https:\/\/share.google\/HhNssWPhkyJ17skm7",
-    "Latitude":"-31.91691198044382",
-    "Longitude":"26.95391516002716"
+    "Latitude":"-31.91903281002792",
+    "Longitude":"26.95859839517394"
   },
   {
     "No":"38",
@@ -414,8 +414,8 @@
     "Province":"Free State",
     "Town":"Botshabelo",
     "Physical Address (Google Map)":"249 Section C, Section C Botshabelo, 9781",
-    "Latitude":"-29.23217551287697",
-    "Longitude":"26.70747221646431"
+    "Latitude":"-29.22807044592622",
+    "Longitude":"26.7137045122598"
   },
   {
     "No":"39",
@@ -425,8 +425,8 @@
     "Province":"Free State",
     "Town":"Botshabelo",
     "Physical Address (Google Map)":"1159 Section C, Botshabelo, 9781",
-    "Latitude":"-29.22431783930347",
-    "Longitude":"26.70089526828257"
+    "Latitude":"-29.23409597626011",
+    "Longitude":"26.7050172654635"
   },
   {
     "No":"40",
@@ -436,8 +436,8 @@
     "Province":"Northern Cape",
     "Town":"Kimberley",
     "Physical Address (Google Map)":"12 Maple Rd, Floors Twp, Kimberley, 8301",
-    "Latitude":"-28.74629913524904",
-    "Longitude":"24.75617049102631"
+    "Latitude":"-28.73917847099753",
+    "Longitude":"24.76517568009713"
   },
   {
     "No":"41",
@@ -447,8 +447,8 @@
     "Province":"Northern Cape",
     "Town":"Kimberley",
     "Physical Address (Google Map)":"Deodar Rd, Floors Twp, Kimberley, 8301",
-    "Latitude":"-28.74548139994879",
-    "Longitude":"24.77247131058075"
+    "Latitude":"-28.74098160667427",
+    "Longitude":"24.76734260845445"
   },
   {
     "No":"42",
@@ -458,8 +458,8 @@
     "Province":"Western Cape",
     "Town":"Stellenbosch",
     "Physical Address (Google Map)":"Koopmans Ave, Scottsdene, Cape Town, 7570",
-    "Latitude":"-33.92456038111257",
-    "Longitude":"18.86830464493464"
+    "Latitude":"-33.93523786602753",
+    "Longitude":"18.85313351420969"
   },
   {
     "No":"43",
@@ -469,30 +469,30 @@
     "Province":"Western Cape",
     "Town":"Stellenbosch",
     "Physical Address (Google Map)":"Joseph Ave, Scottsdene, Cape Town, 7570",
-    "Latitude":"-33.92956351645091",
-    "Longitude":"18.86495491497146"
+    "Latitude":"-33.92743585743257",
+    "Longitude":"18.86326339619207"
   },
   {
     "No":"44",
     "School Name":"Asibemunye High School",
     "School Area":"Mpophomeni A",
     "CBO Partner - GBV Masibambisane":"uMngeni Unemployed Graduates Forum",
-    "Province":"KwaZulu Natal",
+    "Province":"KwaZulu-Natal",
     "Town":"Mpophomeni",
     "Physical Address (Google Map)":"2284 Zothi Rd, Mpophomeni A, Mpophomeni, 3290",
-    "Latitude":"-29.56153139920033",
-    "Longitude":"30.17819859701962"
+    "Latitude":"-29.57466070029357",
+    "Longitude":"30.18415094608206"
   },
   {
     "No":"45",
     "School Name":"Mpophomeni High School",
     "School Area":"Mpophomeni A",
     "CBO Partner - GBV Masibambisane":"uMngeni Unemployed Graduates Forum",
-    "Province":"KwaZulu Natal",
+    "Province":"KwaZulu-Natal",
     "Town":"Mpophomeni",
     "Physical Address (Google Map)":"https:\/\/maps.app.goo.gl\/g7szBrEwy24rP6FE7",
-    "Latitude":"-29.56977848767361",
-    "Longitude":"30.19332877108758"
+    "Latitude":"-29.56073443345731",
+    "Longitude":"30.17832181777939"
   },
   {
     "No":"46",
@@ -502,8 +502,8 @@
     "Province":"Limpopo",
     "Town":"Giyani",
     "Physical Address (Google Map)":"https:\/\/maps.app.goo.gl\/H53h6qmVGaTiWz3U6",
-    "Latitude":"-23.32176237744271",
-    "Longitude":"30.69358098787117"
+    "Latitude":"-23.32126218644981",
+    "Longitude":"30.70499327015509"
   },
   {
     "No":"47",
@@ -513,7 +513,7 @@
     "Province":"Limpopo",
     "Town":"Giyani",
     "Physical Address (Google Map)":"https:\/\/maps.app.goo.gl\/uLJhLqVtuweRdSA29",
-    "Latitude":"-23.30386414683187",
-    "Longitude":"30.7077553990093"
+    "Latitude":"-23.30313154721219",
+    "Longitude":"30.70852188236656"
   }
 ]
