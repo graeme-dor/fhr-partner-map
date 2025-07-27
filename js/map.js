@@ -14,24 +14,29 @@ const colors = {
 
 // Set bounds for South Africa
 const southAfricaBounds = L.latLngBounds(
-  [-35.0, 16.0],  // Southwest corner
-  [-22.0, 33.0]   // Northeast corner
+  [-35.0, 16.0],
+  [-22.0, 33.0]
 );
 
-// Initialize the map with zoom limits and bounds
+// Initialize the map
 const map = L.map('map', {
-  minZoom: 5,
+  minZoom: 4,
   maxZoom: 12
 }).fitBounds(southAfricaBounds);
 
-// Add the tile layer
+// Optional: Override zoom on mobile devices if too zoomed in
+if (window.innerWidth < 768) {
+  map.setZoom(4);  // Mobile-specific zoom level
+}
+
+// Add OpenStreetMap tiles
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution: '© OpenStreetMap contributors'
 }).addTo(map);
 
-// Credit attribution
+// Attribution
 map.attributionControl.addAttribution(
-  'Web Map by <strong>Graeme Dor</strong> & <a href="https://datavisionanalytics.com" target="_blank" rel="noopener noreferrer">DataVision Analytics</a>'
+  'Probono design by <strong>Graeme Dor</strong> & <a href="https://datavisionanalytics.com" target="_blank" rel="noopener noreferrer">DataVision Analytics</a>'
 );
 
 window.allMarkers = [];
@@ -77,7 +82,7 @@ function loadData(sheetName, jsonFile) {
             }).join("<br>");
 
           const marker = L.circleMarker([lat, lon], {
-            radius: 6,  // Slightly larger for visibility
+            radius: 6,
             fillColor: colors[sheetName],
             color: "#000",
             weight: 1,
@@ -106,27 +111,80 @@ for (const [sheetName, jsonFile] of Object.entries(jsonFiles)) {
 
 L.control.layers(null, window.layers, { position: 'topright', collapsed: false }).addTo(map);
 
-// Legend click-to-filter
+// Legend filtering
 document.querySelectorAll('.legend div').forEach(div => {
   div.addEventListener('click', () => {
-    const label = div.textContent.trim();
-    const mapping = {
-      'GBV Masibambisane Partners': 'GBV Masibambisane Partners',
-      'Growing Food Partners': 'Growing Food Partners',
-      'Human Rights Clubs': 'Human Rights Clubs',
-      'TRC Cases Supported': 'TRC Cases Supported'
-    };
-    const selected = mapping[label];
+    const selected = div.dataset.layer;
 
+    // Remove all layers
     Object.values(window.layers).forEach(layer => map.removeLayer(layer));
+
+    // Add selected layer
     if (selected in window.layers) {
       map.addLayer(window.layers[selected]);
     }
 
+    // Update legend styling
     document.querySelectorAll('.legend div').forEach(d => d.classList.remove('active'));
     div.classList.add('active');
 
+    // Reset province dropdown
     const select = document.getElementById('provinceSelect');
     if (select) select.value = "All";
+  });
+});
+
+// Province filtering
+window.addEventListener("dataLoaded", () => {
+  const markers = window.allMarkers || [];
+  const layers = window.layers || {};
+  const provinceBounds = {
+    "Eastern Cape": [[-34.2, 22.3], [-30.5, 30.1]],
+    "Free State": [[-30.7, 24.3], [-26.3, 29.5]],
+    "Gauteng": [[-26.7, 27.4], [-25.6, 28.7]],
+    "KwaZulu-Natal": [[-30.9, 28.5], [-26.8, 32.0]],
+    "Limpopo": [[-25.7, 26.3], [-22.1, 31.5]],
+    "Mpumalanga": [[-26.9, 28.5], [-24.6, 32.0]],
+    "North West": [[-27.6, 22.9], [-24.7, 28.3]],
+    "Northern Cape": [[-32.0, 16.4], [-27.0, 24.0]],
+    "Western Cape": [[-34.8, 18.2], [-31.6, 22.9]]
+  };
+
+  const provinceSet = new Set();
+  markers.forEach(m => {
+    if (m.province) {
+      provinceSet.add(m.province);
+    }
+  });
+
+  const select = document.getElementById("provinceSelect");
+  if (!select) return;
+
+  [...provinceSet].sort().forEach(prov => {
+    const option = document.createElement("option");
+    option.value = prov;
+    option.textContent = prov;
+    select.appendChild(option);
+  });
+
+  select.addEventListener("change", (e) => {
+    const selected = e.target.value;
+
+    markers.forEach(({ marker, province, layerName }) => {
+      const layer = layers[layerName];
+      if (selected === "All" || province === selected) {
+        layer.addLayer(marker);
+      } else {
+        layer.removeLayer(marker);
+      }
+    });
+
+    if (selected in provinceBounds) {
+      map.fitBounds(provinceBounds[selected]);
+    } else {
+      // All Provinces selected: adjust zoom by device
+      const isMobile = window.innerWidth < 768;
+      map.setView([-28.5, 24.5], isMobile ? 4 : 5);
+    }
   });
 });
